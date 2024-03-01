@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="hr_payroll_community_view_tree" model="ir.ui.view">
+        <field name="name">hr.payroll.hours.view.tree</field>
+        <field name="model">hr.payroll.hours</field>
+        <field name="arch" type="xml">
+            <tree string="Extended Hours">
+                <field name="description"/>
+                <field name="employee_id"/>
+                <field name="type"/>
+                <field name="hours"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_payroll_community_view_form" model="ir.ui.view">
+        <field name="name">hr.payroll.hours.view.form</field>
+        <field name="model">hr.payroll.hours</field>
+        <field name="arch" type="xml">
+            <form string="Extended Hours">
+                <sheet>
+                    <div>
+                        <h1>
+                            <field name="employee_id" placeholder="Employee"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="description"/>
+                            <field name="date"/>
+                        </group>
+                        <group>
+                            <field name="type"/>
+                            <field name="hours"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="hr_payroll_hours_action" model="ir.actions.act_window">
+        <field name="name">Extended Hours</field>
+        <field name="res_model">hr.payroll.hours</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="hr_payroll_community_view_tree"/>
+    </record>
+
+    <menuitem id="hr_payroll_hours_action_menu"
+              name="Extended Hours"
+              parent="hr_payroll_community.menu_hr_payroll_community_root"
+              action="hr_payroll_hours_action"/>
+</odoo>
