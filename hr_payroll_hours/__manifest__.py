@@ -11,5 +11,6 @@
         'security/ir.model.access.csv',
         'views/hr_payroll_hours_views.xml',
         'views/hr_payslip_views.xml',
+        'data/hr_payroll_data.xml',
     ],
 }

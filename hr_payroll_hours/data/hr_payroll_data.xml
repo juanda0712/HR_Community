@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    Data file for Contribution Register-->
+    <data noupdate="1">
+        <record id="hr_rule_basic01" model="hr.salary.rule">
+            <field name="name">Monthly Basic Salary</field>
+            <field name="sequence" eval="1"/>
+            <field name="code">BASIC01</field>
+            <field name="category_id" ref="hr_payroll_community.BASIC"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute"><![CDATA[
+#test
+monthly_salary = contract.wage
+result= monthly_salary ]]></field>
+        </record>
+        <record id="hr_rule_basic02" model="hr.salary.rule">
+            <field name="name">Biweekly Basic Salary</field>
+            <field name="sequence" eval="2"/>
+            <field name="code">BASIC02</field>
+            <field name="category_id" ref="hr_payroll_community.BASIC"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute"><![CDATA[
+monthly_salary = contract.wage
+result= monthly_salary / 2 ]]></field>
+        </record>
+        <record id="hr_rule_ded01" model="hr.salary.rule">
+            <field name="name">Unpaid Salary</field>
+            <field name="sequence" eval="10"/>
+            <field name="code">DED01</field>
+            <field name="category_id" ref="hr_payroll_community.DED"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute"><![CDATA[
+month_salary = contract.wage
+day_salary = month_salary / 30
+
+worked_days_lines = payslip.worked_days_line_ids
+if worked_days_lines:
+    unpaid_lines = worked_days_lines .filtered(lambda line: line.code == 'HH02' or line.code == 'HH03')
+    total_unpaid_days = sum(line.number_of_days for line in unpaid_lines )
+else:
+    total_unpaid_days = 0
+result = -total_unpaid_days *  day_salary ]]></field>
+        </record>
+        <record id="hr_rule_double_hours" model="hr.salary.rule">
+            <field name="name">Double Hours</field>
+            <field name="sequence" eval="5"/>
+            <field name="code">DOUBLE</field>
+            <field name="category_id" ref="hr_payroll_community.BASIC"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute"><![CDATA[
+month_salary = contract.wage
+day_salary = month_salary / 30
+hour_salary = day_salary / 8
+
+extended_hours_lines = payslip.extended_hours_ids
+if extended_hours_lines:
+    double_hours_lines = extended_hours_lines.filtered(lambda line: line.type == 'double')
+    total_double_hours = sum(line.hours for line in double_hours_lines)
+else:
+    total_double_hours = 0
+result = total_double_hours * (hour_salary * 2)]]></field>
+        </record>
+        <record id="hr_rule_extra_hours" model="hr.salary.rule">
+            <field name="name">Extra Hours</field>
+            <field name="sequence" eval="5"/>
+            <field name="code">EXTRA</field>
+            <field name="category_id" ref="hr_payroll_community.BASIC"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute"><![CDATA[
+month_salary = contract.wage
+day_salary = month_salary / 30
+hour_salary = day_salary / 8
+extended_hours_lines = payslip.extended_hours_ids
+if extended_hours_lines:
+    extra_hours_lines = extended_hours_lines.filtered(lambda line: line.type == 'extras')
+    total_extra_hours = sum(line.hours for line in extra_hours_lines)
+else:
+    total_extra_hours = 0
+result = total_extra_hours * (hour_salary * 1.5)]]></field>
+        </record>
+    </data>
+</odoo>
