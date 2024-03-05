@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="hr_payslip_run_ihn_view_form" model="ir.ui.view">
+        <field name="name">hr.payslip.run.ihn.view.form</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="inherit_id" ref="hr_payroll_community.hr_payslip_run_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/group" position="replace">
+                <group>
+                    <group>
+                        <label for="date_start" string="Period" readonly="state != 'draft'"/>
+                        <div>
+                            <field name="date_start" class="oe_inline"/>
+                            -
+                            <field name="date_end" class="oe_inline" readonly="state != 'draft'"/>
+                        </div>
+                        <field name="credit_note" readonly="state != 'draft'"/>
+                    </group>
+                    <group>
+                        <field name="struct_id" readonly="state != 'draft'" placeholder="Default structure for each payslip"/>
+                        <button name ="action_compute_all_sheet" type="object" invisible="state != 'draft'" string="Recalculate" class="oe_highlight"  />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

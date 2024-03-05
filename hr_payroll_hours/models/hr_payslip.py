@@ -31,3 +31,10 @@ class HrPayslip(models.Model):
         ])
         self.extended_hours_ids = [(6, 0, unlinked_extended_hours.ids)]
         super(HrPayslip, self).onchange_date_to()
+
+    @api.onchange('struct_id')
+    def onchange_struct_id(self):
+        """Actualizar las líneas del recibo cuando se cambia la estructura salarial."""
+        if not self.struct_id:
+            return
+        self.struct_id = self.struct_id
