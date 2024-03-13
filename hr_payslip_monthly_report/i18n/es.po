@@ -1,0 +1,358 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_payslip_monthly_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-08 03:24+0000\n"
+"PO-Revision-Date: 2024-03-07 21:44-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: hr_payslip_monthly_report
+#: model:mail.template,body_html:hr_payslip_monthly_report.email_template_payslip
+msgid ""
+"\n"
+"                    <p>Hi,</p>\n"
+"                    <p>Here by attaching payslip details of this month</p>\n"
+"                    \n"
+"            "
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__rule_amount
+msgid "Amount"
+msgstr "Monto"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_res_config_settings__send_payslip_by_email
+msgid "Automatic Send Payslip By Mail"
+msgstr "Enviar correo automáticamente al confirmar"
+
+#. module: hr_payslip_monthly_report
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.res_config_settings_view_form
+msgid ""
+"Automatically send Email with Payslip details On\n"
+"                                Confirmation of Payslip."
+msgstr ""
+"Enviar automáticamente el correo una vez se\n"
+"                                Confirme la nómina."
+
+#. module: hr_payslip_monthly_report
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.payslip_confirm_view_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payslip__is_send_mail
+msgid "Checks the Mail is send or not"
+msgstr "Verifica si el correo ha sido enviado o no"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payroll_report__company_id
+msgid "Choose Company"
+msgstr "Seleccionar Empresa"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payroll_report__name
+msgid "Choose Employee"
+msgstr "Seleccionar Empleado"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payroll_report__department_id
+msgid "Choose Hr Department"
+msgstr "Seleccionar Departamento"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payroll_report__job_id
+msgid "Choose Hr Job"
+msgstr "Seleccionar Trabajo"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payroll_report__struct_id
+msgid "Choose Hr Payroll Structure"
+msgstr "Seleccionar Estructura de Nómina"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payroll_report__rule_id
+msgid "Choose Salary Rule"
+msgstr "Seleccionar Regla Salarial"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payroll_report__rule_name
+msgid "Choose Salary Rule Category"
+msgstr "Seleccionar Categoría de Regla Salarial"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__company_id
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payroll_report_search
+msgid "Company"
+msgstr "Empresa"
+
+#. module: hr_payslip_monthly_report
+#. odoo-python
+#: code:addons/hr_payslip_monthly_report/models/hr_payslip.py:0
+#, python-format
+msgid "Compose Email"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model,name:hr_payslip_monthly_report.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.actions.act_window,name:hr_payslip_monthly_report.payslip_confirm_action
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.payslip_confirm_view_form
+msgid "Confirm Payslip"
+msgstr "Confirmar Nómina"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_payslip_confirm__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_payslip_confirm__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__department_id
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payroll_report_search
+msgid "Department"
+msgstr "Departamento"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__display_name
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_payslip_confirm__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.payslip_confirm_view_form
+msgid "Do you want to confirm these Payslips?."
+msgstr "¿Desea confirmar todas las nóminas seleccionadas?"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields.selection,name:hr_payslip_monthly_report.selection__hr_payroll_report__state__done
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payroll_report_search
+msgid "Done"
+msgstr "Listo"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields.selection,name:hr_payslip_monthly_report.selection__hr_payroll_report__state__draft
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payroll_report_search
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__name
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payroll_report_search
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__end_date
+msgid "End Date"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payroll_report__end_date
+msgid "End Date for Report"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payroll_report__date_to
+msgid "Ending Date for Report"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__date_from
+msgid "From"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payroll_report_search
+msgid "Group By"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__id
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_payslip_confirm__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payslip__is_send_mail
+msgid "Is Send Mail"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_res_config_settings__send_payslip_by_email
+msgid "Is needed for automatic send mail"
+msgstr "Es necesario para automatizar el envío de correo."
+
+#. module: hr_payslip_monthly_report
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payroll_report_search
+msgid "Job"
+msgstr "Trabajo"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__job_id
+msgid "Job Title"
+msgstr "Puesto de Trabajo"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_payslip_confirm__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_payslip_confirm__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model,name:hr_payslip_monthly_report.model_payslip_confirm
+msgid "Mass Confirm Payslip"
+msgstr "Confirmación de nómina masiva"
+
+#. module: hr_payslip_monthly_report
+#: model:mail.template,name:hr_payslip_monthly_report.email_template_payslip
+msgid "Monthly Payslip Email"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model,name:hr_payslip_monthly_report.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Nómina"
+
+#. module: hr_payslip_monthly_report
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.res_config_settings_view_form
+msgid "Payroll Email Notification"
+msgstr "Notificación de correo de nómina"
+
+#. module: hr_payslip_monthly_report
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payroll_report_search
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payroll_report_view_graph
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payroll_report_view_pivot
+msgid "Payslip Analysis"
+msgstr "Análisis de Nómina"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.ui.menu,name:hr_payslip_monthly_report.menu_hr_payslip_view_report
+msgid "Payslip Report"
+msgstr "Reporte de Nómina"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.actions.act_window,name:hr_payslip_monthly_report.hr_payroll_report_action
+msgid "Payslips"
+msgstr "Nómina"
+
+#. module: hr_payslip_monthly_report
+#: model:mail.template,subject:hr_payslip_monthly_report.email_template_payslip
+msgid "Ref {{object.number}}"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields.selection,name:hr_payslip_monthly_report.selection__hr_payroll_report__state__cancel
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.ui.menu,name:hr_payslip_monthly_report.menu_hr_payslip_reports
+msgid "Reports"
+msgstr "Reportes"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__rule_name
+msgid "Rule Category"
+msgstr "Categoría de Regla"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__rule_id
+msgid "Salary Rule"
+msgstr "Regla Salarial"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__struct_id
+msgid "Salary Structure"
+msgstr "Estructura Salarial"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payroll_report__state
+msgid "Select Status for Report"
+msgstr "Seleccionar estado del reporte"
+
+#. module: hr_payslip_monthly_report
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payslip_view_form
+msgid "Send Mail"
+msgstr "Enviar Correo"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payroll_report__rule_amount
+msgid "Set Amount"
+msgstr "Establecer Monto"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__start_date
+msgid "Start Date"
+msgstr "Fecha de Inicio"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payroll_report__start_date
+msgid "Start Date for Report"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,help:hr_payslip_monthly_report.field_hr_payroll_report__date_from
+msgid "Starting Date for Report"
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__state
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payroll_report_search
+msgid "Status"
+msgstr "Estado"
+
+#. module: hr_payslip_monthly_report
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payroll_report_search
+msgid "This Month"
+msgstr "Este Mes"
+
+#. module: hr_payslip_monthly_report
+#: model_terms:ir.ui.view,arch_db:hr_payslip_monthly_report.hr_payroll_report_search
+msgid "This Year"
+msgstr "Este Año"
+
+#. module: hr_payslip_monthly_report
+#: model_terms:ir.actions.act_window,help:hr_payslip_monthly_report.hr_payroll_report_action
+msgid ""
+"This report helps in payroll analysis. This helps you\n"
+"            to check your payslips and sorting it out from different group\n"
+"            criteria (Employee, Job title, Department, Company, Pay slip etc.)."
+msgstr ""
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields,field_description:hr_payslip_monthly_report.field_hr_payroll_report__date_to
+msgid "To"
+msgstr "Para"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model.fields.selection,name:hr_payslip_monthly_report.selection__hr_payroll_report__state__verify
+msgid "Waiting"
+msgstr "Esperando"
+
+#. module: hr_payslip_monthly_report
+#: model:ir.model,name:hr_payslip_monthly_report.model_hr_payroll_report
+msgid "hr.payroll.report"
+msgstr ""

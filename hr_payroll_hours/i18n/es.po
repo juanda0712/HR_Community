@@ -1,0 +1,227 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_payroll_hours
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-08 00:38+0000\n"
+"PO-Revision-Date: 2024-03-07 21:21-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: hr_payroll_hours
+#: model:ir.model,name:hr_payroll_hours.model_hr_payroll_hours
+msgid "Add Extra and Double Payroll Hours"
+msgstr "Agregar Horas Extras o Dobles"
+
+#. module: hr_payroll_hours
+#: model:hr.salary.rule,name:hr_payroll_hours.hr_rule_basic02
+msgid "Biweekly Basic Salary"
+msgstr "Salario Básico Quincenal"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,help:hr_payroll_hours.field_hr_payroll_hours__employee_id
+msgid "Choose Employee for Extended Hours"
+msgstr "Seleccionar empleado para horas extendidas"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payslip_input__code
+msgid "Code"
+msgstr "Código"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payslip_input__contract_id
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: hr_payroll_hours
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payslip_run_ihn_view_form
+msgid "Default structure for each payslip"
+msgstr "Estructura por defecto del contrato"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours__type__double
+msgid "Double"
+msgstr "Dobles"
+
+#. module: hr_payroll_hours
+#: model:hr.salary.rule,name:hr_payroll_hours.hr_rule_double_hours
+msgid "Double Hours"
+msgstr "Horas Dobles"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payroll_community_view_form
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: hr_payroll_hours
+#: model:ir.actions.act_window,name:hr_payroll_hours.hr_payroll_hours_action
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payslip__extended_hours_ids
+#: model:ir.ui.menu,name:hr_payroll_hours.hr_payroll_hours_action_menu
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payroll_community_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payroll_community_view_tree
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payslip_ihn_view_form
+msgid "Extended Hours"
+msgstr "Horas Extendidas"
+
+#. module: hr_payroll_hours
+#: model:hr.salary.rule,name:hr_payroll_hours.hr_rule_extra_hours
+msgid "Extra Hours"
+msgstr "Horas Extra"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours__type__extras
+msgid "Extras"
+msgstr ""
+
+#. module: hr_payroll_hours
+#: model:ir.model,name:hr_payroll_hours.model_hr_payslip_employees
+msgid "Generate payslips for all selected employees (Inheritance from base)"
+msgstr ""
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__hours
+msgid "Hours"
+msgstr "Horas"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_payroll_hours
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payslip_ihn_view_form
+msgid "Input Data"
+msgstr ""
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_payroll_hours
+#: model:hr.salary.rule,name:hr_payroll_hours.hr_rule_basic01
+msgid "Monthly Basic Salary"
+msgstr "Salario Básico Mensual"
+
+#. module: hr_payroll_hours
+#: model:ir.model,name:hr_payroll_hours.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Nomina"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__payslip_ids
+msgid "Payslip"
+msgstr "Nomina"
+
+#. module: hr_payroll_hours
+#: model:ir.model,name:hr_payroll_hours.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "Procesamientos de nóminas"
+
+#. module: hr_payroll_hours
+#: model:ir.model,name:hr_payroll_hours.model_hr_payslip_input
+msgid "Payslip Input"
+msgstr "Entrada de nómina"
+
+#. module: hr_payroll_hours
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payslip_ihn_view_form
+msgid "Payslip Line"
+msgstr ""
+
+#. module: hr_payroll_hours
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payslip_run_ihn_view_form
+msgid "Period"
+msgstr "Período"
+
+#. module: hr_payroll_hours
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payslip_run_ihn_view_form
+msgid "Recalculate"
+msgstr "Recalcular"
+
+#. module: hr_payroll_hours
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payslip_ihn_view_form
+msgid "Salary Structure"
+msgstr "Estructura Salarial"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payslip_input__sequence
+#: model:ir.model.fields,help:hr_payroll_hours.field_hr_payslip_input__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,help:hr_payroll_hours.field_hr_payslip_run__struct_id
+msgid "Sets rules for all payslips"
+msgstr ""
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payslip_run__struct_id
+msgid "Structure"
+msgstr "Estructura"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,help:hr_payroll_hours.field_hr_payslip_input__code
+msgid "The code that can be used in the salary rules"
+msgstr "El código puede ser usado en las reglas salariales"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,help:hr_payroll_hours.field_hr_payslip_input__contract_id
+msgid "The contract for which applied this input"
+msgstr ""
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: hr_payroll_hours
+#: model:hr.salary.rule,name:hr_payroll_hours.hr_rule_ded01
+msgid "Unpaid Salary"
+msgstr "Días No Trabajados"
+
+#. module: hr_payroll_hours
+#. odoo-python
+#: code:addons/hr_payroll_hours/wizard/hr_payslips_employees.py:0
+#, python-format
+msgid "You must select employee(s) to generate payslip(s)."
+msgstr "Debes seleccionar empleado(s) para las nóminas."
