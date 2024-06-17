@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-08 00:38+0000\n"
-"PO-Revision-Date: 2024-03-07 21:21-0600\n"
+"POT-Creation-Date: 2024-06-17 23:02+0000\n"
+"PO-Revision-Date: 2024-06-17 17:03-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -99,9 +99,19 @@ msgid "Extended Hours"
 msgstr "Horas Extendidas"
 
 #. module: hr_payroll_hours
+#: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours__type__holiday_extra
+msgid "Extra (In holiday)"
+msgstr "Extras (En Feriado)"
+
+#. module: hr_payroll_hours
 #: model:hr.salary.rule,name:hr_payroll_hours.hr_rule_extra_hours
 msgid "Extra Hours"
 msgstr "Horas Extra"
+
+#. module: hr_payroll_hours
+#: model:hr.salary.rule,name:hr_payroll_hours.hr_rule_holiday_extra_hours
+msgid "Extra Hours (In Holiday)"
+msgstr "Horas Extra (En Feriado)"
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours__type__extras
@@ -112,6 +122,12 @@ msgstr ""
 #: model:ir.model,name:hr_payroll_hours.model_hr_payslip_employees
 msgid "Generate payslips for all selected employees (Inheritance from base)"
 msgstr ""
+
+#. module: hr_payroll_hours
+#: model:hr.salary.rule,name:hr_payroll_hours.hr_rule_holiday_hours
+#: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours__type__holiday
+msgid "Holiday"
+msgstr "Feriado"
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__hours
@@ -146,7 +162,7 @@ msgstr "Salario Básico Mensual"
 #. module: hr_payroll_hours
 #: model:ir.model,name:hr_payroll_hours.model_hr_payslip
 msgid "Pay Slip"
-msgstr "Nomina"
+msgstr ""
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__payslip_ids

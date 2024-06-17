@@ -83,5 +83,45 @@ else:
     total_extra_hours = 0
 result = total_extra_hours * (hour_salary * 1.5)]]></field>
         </record>
+        <record id="hr_rule_holiday_hours" model="hr.salary.rule">
+            <field name="name">Holiday</field>
+            <field name="sequence" eval="6"/>
+            <field name="code">HOLIDAY</field>
+            <field name="category_id" ref="hr_payroll_community.BASIC"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute"><![CDATA[
+month_salary = contract.wage
+day_salary = month_salary / 30
+hour_salary = day_salary / 8
+
+extended_hours_lines = payslip.extended_hours_ids
+if extended_hours_lines:
+    holiday_hours_lines = extended_hours_lines.filtered(lambda line: line.type == 'holiday')
+    total_holiday_hours = sum(line.hours for line in holiday_hours_lines)
+else:
+    total_holiday_hours = 0
+result = total_holiday_hours * (hour_salary)]]></field>
+        </record>
+        <record id="hr_rule_holiday_extra_hours" model="hr.salary.rule">
+            <field name="name">Extra Hours (In Holiday)</field>
+            <field name="sequence" eval="6"/>
+            <field name="code">EXTRAHOLIDAY</field>
+            <field name="category_id" ref="hr_payroll_community.BASIC"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute"><![CDATA[
+month_salary = contract.wage
+day_salary = month_salary / 30
+hour_salary = day_salary / 8
+
+extended_hours_lines = payslip.extended_hours_ids
+if extended_hours_lines:
+    holiday_extra_hours_lines = extended_hours_lines.filtered(lambda line: line.type == 'holiday_extra')
+    total_holiday_extra_hours = sum(line.hours for line in holiday_extra_hours_lines)
+else:
+    total_holiday_extra_hours = 0
+result = total_holiday_extra_hours * (hour_salary * 3)]]></field>
+        </record>
     </data>
 </odoo>
