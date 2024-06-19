@@ -44,6 +44,21 @@ else:
     total_unpaid_days = 0
 result = -total_unpaid_days *  day_salary ]]></field>
         </record>
+        <record id="hr_rule_input" model="hr.salary.rule">
+            <field name="name">Aditional Inputs</field>
+            <field name="sequence" eval="4"/>
+            <field name="code">INPUT</field>
+            <field name="category_id" ref="hr_payroll_community.BASIC"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute"><![CDATA[
+input_lines = payslip.input_line_ids
+if input_lines:
+    total_input = sum(input.amount for input in input_lines)
+else:
+    total_input = 0
+result = total_input ]]></field>
+        </record>
         <record id="hr_rule_double_hours" model="hr.salary.rule">
             <field name="name">Double Hours</field>
             <field name="sequence" eval="5"/>

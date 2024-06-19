@@ -1,8 +1,8 @@
 {
-    'name': 'Payroll Hours JRM',
+    'name': 'JRM HR',
     'version': '17.0',
-    'author': 'Juan Rodriguez Montero',
-    'maintainer': 'Juan Rodriguez Montero',
+    'author': 'JRM Tech Solutions',
+    'maintainer': 'JRM Tech Solutions',
     'license': 'AGPL-3',
     'category': 'Extra Tools',
     'summary': 'Short summary.',
@@ -12,6 +12,6 @@
         'views/hr_payroll_hours_views.xml',
         'views/hr_payslip_views.xml',
         'views/hr_payslip_run_views.xml',
-        'data/hr_payroll_data.xml',
+        'data/hr_payroll_data.xml'
     ],
 }
