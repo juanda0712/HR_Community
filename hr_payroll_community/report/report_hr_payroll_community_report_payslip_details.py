@@ -111,9 +111,22 @@ class ReportHrPayrollCommunityReportPayslipDetails(models.AbstractModel):
                     })
         return res
 
+    def get_contract_info(self, employee):
+        """Función para obtener información del contrato del empleado"""
+        Contract = self.env['hr.contract']
+        contract = Contract.search([('employee_id', '=', employee.id), ('state', '=', 'open')], limit=1)
+        if contract:
+            wage = contract.wage
+            wage_per_hour = wage / 30 / 8
+            return {
+                'contract_name': contract.name,
+                'wage': wage,
+                'wage_per_hour': wage_per_hour,
+            }
+        return {}
+
     @api.model
     def _get_report_values(self, docids, data=None):
-        """Function for getting Payslip Details Report values"""
         payslips = self.env['hr.payslip'].browse(docids)
         return {
             'doc_ids': docids,
@@ -123,8 +136,8 @@ class ReportHrPayrollCommunityReportPayslipDetails(models.AbstractModel):
             'get_details_by_rule_category': self.get_details_by_rule_category(
                 payslips.mapped('details_by_salary_rule_category_ids').filtered(
                     lambda r: r.appears_on_payslip)),
-            'get_lines_by_contribution_register':
-                self.get_lines_by_contribution_register(
+            'get_lines_by_contribution_register': self.get_lines_by_contribution_register(
                 payslips.mapped('line_ids').filtered(
                     lambda r: r.appears_on_payslip)),
+            'get_contract_info': self.get_contract_info,
         }

@@ -112,6 +112,18 @@
  #: model_terms:ir.ui.view,arch_db:hr_payroll_community.report_payslipdetails
  msgid "<strong>Email</strong>"
  msgstr "<strong>Email</strong>"
+
+ #. module: hr_payroll_community
+ #: model_terms:ir.ui.view,arch_db:hr_payroll_community.report_payslip
+ #: model_terms:ir.ui.view,arch_db:hr_payroll_community.report_payslipdetails
+ msgid "<strong>Contract</strong>"
+ msgstr "<strong>Contrato</strong>"
+
+ #. module: hr_payroll_community
+ #: model_terms:ir.ui.view,arch_db:hr_payroll_community.report_payslip
+ #: model_terms:ir.ui.view,arch_db:hr_payroll_community.report_payslipdetails
+ msgid "<strong>Salary per Hour</strong>"
+ msgstr "<strong>Salario por Hora</strong>"
  
  #. module: hr_payroll_community
  #: model_terms:ir.ui.view,arch_db:hr_payroll_community.report_payslip
