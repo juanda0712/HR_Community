@@ -9,7 +9,6 @@ class HrPayslipRun(models.Model):
     struct_id = fields.Many2one(comodel_name='hr.payroll.structure',
                                 string='Structure',
                                 help='Sets rules for all payslips')
-
     @api.onchange('struct_id')
     def _onchange_struct_id(self):
         for payslip in self.slip_ids:
