@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-12 21:29+0000\n"
-"PO-Revision-Date: 2024-07-12 15:31-0600\n"
+"POT-Creation-Date: 2025-01-24 19:50+0000\n"
+"PO-Revision-Date: 2025-01-24 14:03-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -21,6 +21,34 @@ msgstr ""
 #: model:ir.model,name:hr_payroll_hours.model_hr_payroll_hours
 msgid "Add Extra and Double Payroll Hours"
 msgstr "Agregar Horas Extras o Dobles"
+
+#. module: hr_payroll_hours
+#: model:hr.salary.rule,name:hr_payroll_hours.hr_rule_input
+msgid "Aditional Inputs"
+msgstr "Entradas Adicionales"
+
+#. module: hr_payroll_hours
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payroll_hours_batch_view_form
+msgid "Batch Description"
+msgstr "Descripción del Lote"
+
+#. module: hr_payroll_hours
+#: model:ir.actions.act_window,name:hr_payroll_hours.hr_payroll_hours_batch_action
+#: model:ir.ui.menu,name:hr_payroll_hours.hr_payroll_hours_batch_menu
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payroll_hours_batch_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payroll_hours_batch_view_tree
+msgid "Batch Payroll Hours"
+msgstr "Extras por Lote"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__batch_id
+msgid "Batch Reference"
+msgstr "Referencia del Lote"
+
+#. module: hr_payroll_hours
+#: model:ir.model,name:hr_payroll_hours.model_hr_payroll_hours_batch
+msgid "Batch for Extra and Double Payroll Hours"
+msgstr "Lote para Horas Dobles y Extras de Empleados"
 
 #. module: hr_payroll_hours
 #: model:hr.salary.rule,name:hr_payroll_hours.hr_rule_basic02
@@ -38,42 +66,58 @@ msgid "Code"
 msgstr "Código"
 
 #. module: hr_payroll_hours
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payroll_hours_batch_view_form
+msgid "Confirm Batch"
+msgstr "Confirmar Lote"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours_batch__state__confirmed
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payslip_input__contract_id
 msgid "Contract"
 msgstr "Contrato"
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours_batch__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creado por"
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__create_date
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours_batch__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creado el"
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__date
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours_batch__date
 msgid "Date"
 msgstr "Fecha"
 
 #. module: hr_payroll_hours
-#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payslip_run_ihn_view_form
-msgid "Default structure for each payslip"
-msgstr "Estructura por defecto del contrato"
-
-#. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__description
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours_batch__description
 msgid "Description"
 msgstr "Descripción"
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__display_name
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours_batch__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: hr_payroll_hours
+#: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours_batch__state__done
+msgid "Done"
+msgstr "Listo"
+
+#. module: hr_payroll_hours
 #: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours__type__double
+#: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours_batch__type__double
 msgid "Double"
 msgstr "Dobles"
 
@@ -83,23 +127,35 @@ msgid "Double Hours"
 msgstr "Horas Dobles"
 
 #. module: hr_payroll_hours
+#: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours_batch__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__employee_id
 #: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payroll_community_view_form
 msgid "Employee"
 msgstr "Empleado"
 
 #. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours_batch__employee_ids
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payroll_hours_batch_view_form
+msgid "Employees"
+msgstr "Empleados"
+
+#. module: hr_payroll_hours
 #: model:ir.actions.act_window,name:hr_payroll_hours.hr_payroll_hours_action
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payslip__extended_hours_ids
 #: model:ir.ui.menu,name:hr_payroll_hours.hr_payroll_hours_action_menu
 #: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payroll_community_view_form
-#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payroll_community_view_tree
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payroll_hours_view_tree
 #: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payslip_ihn_view_form
 msgid "Extended Hours"
-msgstr "Horas Extendidas"
+msgstr "Extras por Empleado"
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours__type__holiday_extra
+#: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours_batch__type__holiday_extra
 msgid "Extra (In holiday)"
 msgstr "Extras (En Feriado)"
 
@@ -115,27 +171,36 @@ msgstr "Horas Extra (En Feriado)"
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours__type__extras
+#: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours_batch__type__extras
 msgid "Extras"
-msgstr ""
+msgstr "Extras"
 
 #. module: hr_payroll_hours
 #: model:ir.model,name:hr_payroll_hours.model_hr_payslip_employees
 msgid "Generate payslips for all selected employees (Inheritance from base)"
+msgstr "Genera la nomina para todos los empleados selecccionados"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours_batch__payroll_hours_ids
+msgid "Generated Payroll Hours"
 msgstr ""
 
 #. module: hr_payroll_hours
 #: model:hr.salary.rule,name:hr_payroll_hours.hr_rule_holiday_hours
 #: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours__type__holiday
+#: model:ir.model.fields.selection,name:hr_payroll_hours.selection__hr_payroll_hours_batch__type__holiday
 msgid "Holiday"
 msgstr "Feriado"
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__hours
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours_batch__hours
 msgid "Hours"
 msgstr "Horas"
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__id
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours_batch__id
 msgid "ID"
 msgstr ""
 
@@ -145,17 +210,14 @@ msgid "Input Data"
 msgstr ""
 
 #. module: hr_payroll_hours
-#: model:hr.salary.rule,name:hr_payroll_hours.hr_rule_input
-msgid "Inputs"
-msgstr "Entradas Adicionales"
-
-#. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours_batch__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__write_date
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours_batch__write_date
 msgid "Last Updated on"
 msgstr ""
 
@@ -175,11 +237,6 @@ msgid "Payslip"
 msgstr "Nomina"
 
 #. module: hr_payroll_hours
-#: model:ir.model,name:hr_payroll_hours.model_hr_payslip_run
-msgid "Payslip Batches"
-msgstr "Procesamientos de nóminas"
-
-#. module: hr_payroll_hours
 #: model:ir.model,name:hr_payroll_hours.model_hr_payslip_input
 msgid "Payslip Input"
 msgstr "Entrada de nómina"
@@ -190,19 +247,19 @@ msgid "Payslip Line"
 msgstr ""
 
 #. module: hr_payroll_hours
-#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payslip_run_ihn_view_form
-msgid "Period"
-msgstr "Período"
-
-#. module: hr_payroll_hours
-#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payslip_run_ihn_view_form
-msgid "Recalculate"
-msgstr "Recalcular"
-
-#. module: hr_payroll_hours
 #: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payslip_ihn_view_form
 msgid "Salary Structure"
 msgstr "Estructura Salarial"
+
+#. module: hr_payroll_hours
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.view_employee_selection
+msgid "Select Employees"
+msgstr "Seleccionar Empleados"
+
+#. module: hr_payroll_hours
+#: model:ir.model.fields,help:hr_payroll_hours.field_hr_payroll_hours_batch__employee_ids
+msgid "Select employees for batch extra hours."
+msgstr "Seleccionar Empleados para el Lote"
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payslip_input__sequence
@@ -211,14 +268,14 @@ msgid "Sequence"
 msgstr "Secuencia"
 
 #. module: hr_payroll_hours
-#: model:ir.model.fields,help:hr_payroll_hours.field_hr_payslip_run__struct_id
-msgid "Sets rules for all payslips"
-msgstr ""
+#: model_terms:ir.ui.view,arch_db:hr_payroll_hours.hr_payroll_hours_batch_view_form
+msgid "Set to Draft"
+msgstr "Convertir a Borrador"
 
 #. module: hr_payroll_hours
-#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payslip_run__struct_id
-msgid "Structure"
-msgstr "Estructura"
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours_batch__state
+msgid "State"
+msgstr "Estado"
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields,help:hr_payroll_hours.field_hr_payslip_input__code
@@ -232,6 +289,7 @@ msgstr ""
 
 #. module: hr_payroll_hours
 #: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours__type
+#: model:ir.model.fields,field_description:hr_payroll_hours.field_hr_payroll_hours_batch__type
 msgid "Type"
 msgstr "Tipo"
 

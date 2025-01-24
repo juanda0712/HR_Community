@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Vista de lista para hr.payroll.hours.batch -->
+    <record id="hr_payroll_hours_batch_view_tree" model="ir.ui.view">
+        <field name="name">hr.payroll.hours.batch.view.tree</field>
+        <field name="model">hr.payroll.hours.batch</field>
+        <field name="arch" type="xml">
+            <tree string="Batch Payroll Hours">
+                <field name="description"/>
+                <field name="date"/>
+                <field name="hours"/>
+                <field name="type"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario para hr.payroll.hours.batch -->
+    <record id="hr_payroll_hours_batch_view_form" model="ir.ui.view">
+        <field name="name">hr.payroll.hours.batch.view.form</field>
+        <field name="model">hr.payroll.hours.batch</field>
+        <field name="arch" type="xml">
+            <form string="Batch Payroll Hours">
+                <header>
+                    <button string="Confirm Batch" type="object" name="action_generate_individual_hours"
+                            class="btn-primary" invisible="state != 'draft'"/>
+                    <button string="Set to Draft" type="object" name="set_to_draft"
+                            class="btn-secondary" invisible="state != 'done'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                </header>
+                <sheet>
+                    <div>
+                        <h1>
+                            <field name="description" placeholder="Batch Description"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="date"/>
+                            <field name="hours"/>
+                        </group>
+                        <group>
+                            <field name="type"/>
+                            <field name="state" invisible="1"/>
+                        </group>
+                    </group>
+                    <group string="Employees">
+                        <field name="employee_ids" widget="many2many" context="{'tree_view_ref': 'your_module.view_employee_selection'}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_employee_selection" model="ir.ui.view">
+        <field name="name">hr.employee.selection</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <tree string="Select Employees">
+                <field name="name"/>
+                <field name="job_id"/>
+                <field name="department_id"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Acción para hr.payroll.hours.batch -->
+    <record id="hr_payroll_hours_batch_action" model="ir.actions.act_window">
+        <field name="name">Batch Payroll Hours</field>
+        <field name="res_model">hr.payroll.hours.batch</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="hr_payroll_hours_batch_view_tree"/>
+    </record>
+
+    <!-- Menú para hr.payroll.hours.batch -->
+    <menuitem id="hr_payroll_hours_batch_menu"
+              name="Batch Payroll Hours"
+              parent="hr_payroll_community.menu_hr_payroll_community_root"
+              action="hr_payroll_hours_batch_action"/>
+</odoo>

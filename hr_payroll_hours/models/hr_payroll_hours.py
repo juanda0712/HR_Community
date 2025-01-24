@@ -12,3 +12,5 @@ class HrPayrollHours(models.Model):
                                   required=True,
                                   help="Choose Employee for Extended Hours")
     payslip_ids = fields.Many2many('hr.payslip', copy=False)
+    batch_id = fields.Many2one('hr.payroll.hours.batch', string='Batch Reference', ondelete='cascade')
+
