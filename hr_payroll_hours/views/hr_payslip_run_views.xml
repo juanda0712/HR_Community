@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="custom_hr_payslip_run_view_form" model="ir.ui.view">
+        <field name="name">custom.hr.payslip.run.view.form</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="inherit_id" ref="hr_payroll_community.hr_payslip_run_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_payslip_run']" position="after">
+                <button string="Confirm All"
+                        name="action_confirm_all"
+                        type="object"
+                        class="oe_highlight"
+                        invisible="state != 'draft'"
+                        />
+            </xpath>
+        </field>
+    </record>
+</odoo>

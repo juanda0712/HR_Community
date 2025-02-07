@@ -14,8 +14,10 @@ class HrPayslipRun(models.Model):
         for payslip in self.slip_ids:
             payslip.struct_id = self.struct_id
 
-    def action_compute_all_sheet(self):
-        self.slip_ids.action_compute_sheet()
+    def action_confirm_all(self):
+        #self.slip_ids.action_compute_sheet()
+        self.slip_ids.action_payslip_done()
+        self.close_payslip_run()
         return True
 
 
